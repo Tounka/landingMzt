@@ -1,0 +1,23 @@
+:root{
+    --ColorBlancoPrincipal: #E8E8E8;
+    
+    --ColorVerdePrincipal: #63806F;
+    --ColorVerdePrincipalHover:#486253;
+
+    --ColorRojoPrincipal: #AD343E;
+    --ColorNaranjaPrincipal: #E28413;
+    --ColorNegroPrincipal: #000022;
+
+    --FuentePrincipal: 'FuentePrincipal';
+    --FuenteSecundaria: 'FuenteSecundaria';
+}
+@font-face {
+    font-family: 'FuentePrincipal';
+    src: url('../src/src/fuentes/Poppins-Regular.ttf') format('truetype');
+     
+}
+@font-face {
+    font-family: 'FuenteSecundaria';
+    src: url('../src/src/fuentes/NunitoSans_Light.ttf') format('truetype');
+     
+}
