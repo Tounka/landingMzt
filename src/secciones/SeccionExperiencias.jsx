@@ -10,9 +10,14 @@ import img3 from '../src/img/imgExperiencias3Ram.webp'
 const ContenedorExperiencias = styled.div`
     display: grid;
     grid-template-columns: 2fr 3fr;
-    height: 300px;
+    height: auto;
     width: 100%;
     gap: 20px;
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        height: auto;
+    }
 `
 const ContenedorComponentesIzquierda = styled(ContenedorComponentes)`
     flex-direction: column;
@@ -24,19 +29,29 @@ const ContenedorComponentesDerecha = styled(ContenedorComponentes)`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    @media (max-width: 550px) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `
 const ContenedorCard = styled.div`
     height: 100%;
     width: 100%;
+    
 
     background-color: white; 
     padding: 10px;
     border-radius: 10px;
+    @media (max-width: 550px) {
+        width: 200px;
+        height: 250px;
+    }  
 `
 const ContenedorImg = styled.div`
     height: 100%;
     width: 100%;
-
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
     img{
         height: 100%;
         width: 100%;

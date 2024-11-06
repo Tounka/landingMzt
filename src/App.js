@@ -1,5 +1,6 @@
 
 import { DisplayPrincipal } from './componentesGenerales/Displays';
+import { Footer } from './componentesGenerales/Footer';
 import { MenuHeader } from './componentesGenerales/MenuHeader';
 
 import './index.css';
@@ -12,6 +13,7 @@ function App() {
       
       <IndexSecciones />
   
+      <Footer />
     </DisplayPrincipal>
   
   );

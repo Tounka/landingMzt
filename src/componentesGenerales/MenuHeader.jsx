@@ -47,9 +47,26 @@ const BtnPrincipal = styled.button`
 `
 const BtnSecundario = styled(BtnPrincipal)`
     width: auto;
-    font-size: 32px;
+    height: auto;
+    padding: 10px;
+    font-size: 28px;
+    @media (max-width: 800px) {
+            font-size: 22px;
+        }
+
     &:hover{
-        font-size: 32px;
+        font-size: 28px;
+    }
+    @media (max-width: 800px) {
+        &:hover{
+        font-size: 22px;
+    }
+    }
+`
+const ContenedorInvisible = styled.div`
+    @media (max-width: 700px ) {
+        
+     display: none;
     }
 `
 
@@ -59,6 +76,18 @@ const ContenedorSeccion = styled.div`
     height: 100%;
     align-items:center;
     gap: ${props => props.gap ? props.gap : '10px;'};
+    @media (max-width: 800px) {
+        gap: 10px;
+    }
+    p{
+
+        font-size: 28px;
+
+        @media (max-width: 800px) {
+            font-size: 22px;
+        }
+    }
+    
 `
 export const MenuHeader = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -91,12 +120,16 @@ export const MenuHeader = () => {
 
                 <ContenedorSeccion>
                     <BtnPrincipal> <FaMapMarkedAlt /> </BtnPrincipal>
-                    <TxtGenerico color= 'var(--ColorVerdePrincipal)' size= '28px' bold fontFamily='var(--FuentePrincipal)' > Mejora tu vida </TxtGenerico>
+                    <ContenedorInvisible>
+                        <TxtGenerico color= 'var(--ColorVerdePrincipal)'  bold fontFamily='var(--FuentePrincipal)' > Mejora tu vida </TxtGenerico>
+                    </ContenedorInvisible>
                 </ContenedorSeccion>
 
                 <ContenedorSeccion gap='20px'>
-                    <TxtGenerico onClick={() => scrollToSection('inicio')} color= 'var(--ColorVerdePrincipal)' size= '28px' bold pointer fontFamily='var(--FuentePrincipal)' > Inicio </TxtGenerico>
-                    <TxtGenerico color= 'var(--ColorVerdePrincipal)' size= '26px'  fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
+                    <TxtGenerico onClick={() => scrollToSection('inicio')} color= 'var(--ColorVerdePrincipal)'  bold pointer fontFamily='var(--FuentePrincipal)' > Inicio </TxtGenerico>
+                    <ContenedorInvisible>
+                        <TxtGenerico color= 'var(--ColorVerdePrincipal)'   fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
+                    </ContenedorInvisible>
                     <BtnSecundario>Contacto</BtnSecundario>
                 </ContenedorSeccion>
             </ContenedorHeader>

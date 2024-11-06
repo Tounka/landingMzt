@@ -9,6 +9,9 @@ const ContenedorImg = styled.div`
     overflow: hidden;
     border-radius: 10px;
     background-color: var(--ColorVerdePrincipal);
+
+
+
     img{
         width: 100%;
         height: 100%;

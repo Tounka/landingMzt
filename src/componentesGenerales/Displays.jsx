@@ -5,8 +5,8 @@ export const DisplayPrincipal = styled.div`
     flex-direction: column;
    
     
-    min-height: 100dvh;
-    width: 100dvw;
+    height: auto;
+    width: 100%;
     background-color: var(--ColorBlancoPrincipal);
     gap: 10px;
 
