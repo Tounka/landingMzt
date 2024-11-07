@@ -33,6 +33,7 @@ const TituloFormulario = styled.h2`
     font-size: 32px;
     color: var(--ColorVerdePrincipal);
     text-align: center;
+    margin-top: 0;
     margin-bottom: 5px;
     @media (max-width: 900px) {
 
@@ -185,7 +186,6 @@ const ContenedorTxtImgInterno = styled(ContenedorVertical)`
 
 export const SeccionContacto = () => {
     return (
-       
             <ContenedorSeccionContactoStyled id="contacto">
                 
                 <ContenedorSubseccion>
