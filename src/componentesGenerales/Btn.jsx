@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { FaWhatsapp } from 'react-icons/fa';
+import { TxtGenerico } from "./Txt";
+import { ContenedorHorizontal } from "./Displays";
 
 export const BtnGenerico = styled.button`
     height: auto;
@@ -24,3 +27,45 @@ export const BtnGenerico = styled.button`
 
     }
 `
+
+const ContenedorNumeroTelefonico = styled(ContenedorHorizontal)`
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+`
+const BtnCircularWhatsapp = styled(BtnGenerico)`
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 46px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+
+    &:hover{
+        background-color: #27e46c;
+      
+        transition:  background-color 0.3s;
+
+    }
+
+`
+
+export const BtnWhatsapp = () => {
+    const numeroTelefonico = '6691382961';
+    const handleClick = () => {
+      window.open(`https://wa.me/${numeroTelefonico}`, '_blank');
+    };
+  
+    return (
+        <ContenedorNumeroTelefonico onClick={handleClick}>
+            <BtnCircularWhatsapp  >
+                <FaWhatsapp  />
+    
+            </BtnCircularWhatsapp>
+            <TxtGenerico  color = 'var(--ColorBlancoPrincipal)' size='26px' >{numeroTelefonico}</TxtGenerico>
+        </ContenedorNumeroTelefonico>
+
+    );
+  };
+  

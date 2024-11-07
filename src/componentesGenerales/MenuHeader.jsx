@@ -130,7 +130,7 @@ export const MenuHeader = () => {
                     <ContenedorInvisible>
                         <TxtGenerico color= 'var(--ColorVerdePrincipal)'   fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
                     </ContenedorInvisible>
-                    <BtnSecundario>Contacto</BtnSecundario>
+                    <BtnSecundario onClick={() => scrollToSection('contacto')}>Contacto</BtnSecundario>
                 </ContenedorSeccion>
             </ContenedorHeader>
         </ContenedorHeaderStyled>

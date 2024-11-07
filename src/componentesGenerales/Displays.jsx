@@ -28,3 +28,22 @@ export const ContenedorComponentes = styled.div`
     height: 100%;
     align-items:center;
 `
+export const ContenedorHorizontal = styled.div`
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: space-between;
+    
+`
+export const ContenedorVertical = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`
+export const ContenedorVerde = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--ColorVerdePrincipal);
+`;

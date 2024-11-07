@@ -44,8 +44,8 @@ const ContenedorCard = styled.div`
     padding: 10px;
     border-radius: 10px;
     @media (max-width: 550px) {
-        width: 200px;
-        height: 250px;
+        width: 175px;
+        height: 200px;
     }  
 `
 const ContenedorImg = styled.div`

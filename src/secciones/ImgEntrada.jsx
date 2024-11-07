@@ -10,7 +10,9 @@ const ContenedorImg = styled.div`
     border-radius: 10px;
     background-color: var(--ColorVerdePrincipal);
 
-
+    @media (min-width: 1200px) {
+        height: 600px;
+    }
 
     img{
         width: 100%;

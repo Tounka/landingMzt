@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ImgEntrada } from "./ImgEntrada";
 import { Experiencias } from "./SeccionExperiencias";
 import { SeccionServicios } from "./SeccionServicios";
+import { SeccionContacto } from "./SeccionContacto";
 
 const ContenedorSecciones = styled.div`
     display: flex;
@@ -14,8 +15,9 @@ export const IndexSecciones = () => {
   return (
     <ContenedorSecciones>
         <ImgEntrada />
-        <Experiencias />
         <SeccionServicios />
+        <Experiencias />
+        <SeccionContacto />
     </ContenedorSecciones>
   
   );
