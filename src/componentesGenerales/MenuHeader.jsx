@@ -95,7 +95,10 @@ export const MenuHeader = () => {
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
+            window.scrollTo({
+                top: section.offsetTop - 80, 
+                behavior: "smooth",
+            });
         }
     };
     
@@ -128,7 +131,7 @@ export const MenuHeader = () => {
                 <ContenedorSeccion gap='20px'>
                     <TxtGenerico onClick={() => scrollToSection('inicio')} color= 'var(--ColorVerdePrincipal)'  bold pointer fontFamily='var(--FuentePrincipal)' > Inicio </TxtGenerico>
                     <ContenedorInvisible>
-                        <TxtGenerico color= 'var(--ColorVerdePrincipal)'   fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
+                        <TxtGenerico onClick={() => scrollToSection('Experiencias')} color= 'var(--ColorVerdePrincipal)'   fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
                     </ContenedorInvisible>
                     <BtnSecundario onClick={() => scrollToSection('contacto')}>Contacto</BtnSecundario>
                 </ContenedorSeccion>

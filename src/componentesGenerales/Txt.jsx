@@ -1,6 +1,6 @@
 import styled from "styled-components"
 export const TxtGenerico = styled.p`
-    user-select: none;
+    
     text-align: ${props => props.aling ? props.aling : 'center'};
     font-size: ${props => props.size ? props.size : '14px'};
     color: ${props => props.color ? props.color : ''};

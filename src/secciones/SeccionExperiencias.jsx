@@ -70,13 +70,16 @@ const CardExperiencias = ({src, alt}) =>{
     )
 }
 export const Experiencias = () => {
+    const handleClick = () => {
+        window.open('https://sinaloa.travel/destinos/mazatlan', '_blank');
+    }
     return (
       <ContenedorGenerico id="Experiencias">
         <ContenedorExperiencias>
             <ContenedorComponentesIzquierda>
                 <TxtTitularGenericoH1 color= 'var(--ColorVerdePrincipal)' aling='start' size= '38px' bold > Descubre Mazatlán como nunca antes </TxtTitularGenericoH1>
                 <TxtGenerico  aling='start' size= '16px'  > Mazatlán, la Perla del Pacífico, te enamorará con sus hermosas playas, deliciosa gastronomía y animados festivales. Un destino perfecto para disfrutar de cultura, aventura y relajación junto al mar. </TxtGenerico>
-                <BtnGenerico size='24px'>Leer mas</BtnGenerico>
+                <BtnGenerico onClick={() => handleClick()} size='24px'>Leer mas</BtnGenerico>
             </ContenedorComponentesIzquierda>
 
             <ContenedorComponentesDerecha>

@@ -8,7 +8,7 @@ const ContenedorSeccionPrecios = styled(ContenedorGenerico)`
     flex-direction: column;
     height: 500px;
     height: auto;
-    padding: 10px 0;
+    padding: 30px 0;
     gap: 10px;
 `
 
@@ -17,7 +17,7 @@ const ContenedorCardStyled = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    height: 350px;
+    height: 400px;
     width: 300px;
     gap: 10px;
     padding: 20px;
@@ -57,6 +57,7 @@ const ContenedorInferiorRecorridos = styled.div`
 `
 const ContenedorSubseccion = styled(ContenedorInferiorRecorridos)`
     flex-direction: column;
+    gap: 10px;
 `
 const ContenedorCupon = styled(TxtGenerico)`
     background-color: var(--ColorBlancoPrincipal);
@@ -69,20 +70,20 @@ const ContenedorCards = styled.div`
     justify-content: center;
     gap: 10px;
 `
-const CardRecorridos = () =>{
+const CardRecorridos = ({titulo, txt, img, tituloInferior, txtBtn}) =>{
     return(
         <ContenedorCardStyled>
             <ContenedorSubseccion>
                 <ContenedorImg>
-                    <ImgPicture src={ImgRecorrido}   alt='Imagen de recorridos Mazatlan, Sinaloa ' />
+                    <ImgPicture src={img}   alt='Imagen de recorridos Mazatlan, Sinaloa ' />
                 </ContenedorImg>
-                <TxtSeccionRecorrido>Recorrido por Mazatlan</TxtSeccionRecorrido>
-                <TxtSeccionRecorridoSecundario>Descubre Mazatlán en el Centro Histórico. Pasea por la Plazuela Machado, visita la Catedral y el Teatro Ángela Peralta, y termina con una cena de mariscos y música en vivo.</TxtSeccionRecorridoSecundario>
+                <TxtSeccionRecorrido>{titulo}</TxtSeccionRecorrido>
+                <TxtSeccionRecorridoSecundario>{txt}</TxtSeccionRecorridoSecundario>
             </ContenedorSubseccion>
        
             <ContenedorInferiorRecorridos>
-                <TxtGenerico bold size='18px' color='var(--ColorBlancoPrincipal)' > 10% descuento:  </TxtGenerico>
-                <ContenedorCupon bold size='18px' color='var(--ColorBlancoPrincipal)' > Mazatlan2024  </ContenedorCupon>
+                <TxtGenerico bold size='18px' color='var(--ColorBlancoPrincipal)' > {tituloInferior}  </TxtGenerico>
+                <ContenedorCupon bold size='18px' color='var(--ColorBlancoPrincipal)' > {txtBtn}  </ContenedorCupon>
             </ContenedorInferiorRecorridos>
         </ContenedorCardStyled>
     )
@@ -94,7 +95,7 @@ export const SeccionPrecios = () => {
             <TxtTitularGenericoH1 size= '38px' bold color= 'var(--ColorBlancoPrincipal)'> Recorridos </TxtTitularGenericoH1> 
             <TxtGenerico size= '24px' color= 'var(--ColorBlancoPrincipal)'> Descubre nuestros recorridos. Si buscas recorridos personalizados, no dudes en contactarnos.  </TxtGenerico>
             <ContenedorCards>
-                <CardRecorridos />
+                <CardRecorridos titulo= 'Recorrido por Mazatlan' txt='Descubre Mazatlán en el Centro Histórico. Pasea por la Plazuela Machado, visita la Catedral y el Teatro Ángela Peralta, y termina con una cena de mariscos y música en vivo.' img={ImgRecorrido} tituloInferior='10% descuento:' txtBtn='Mazatlan2024' />
             </ContenedorCards>
         </ContenedorSeccionPrecios>
     </ContenedorVerde>

@@ -18,7 +18,7 @@ const ContenedorSeccionsStyled = styled.div`
     width: 100%;
     height: auto;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     
     display: grid;
     grid-template-columns: ${({ reverse }) => reverse ? '1fr 2fr' : '2fr 1fr'};
@@ -75,7 +75,8 @@ const TxtServicio = styled(TxtGenerico)`
 const TxtServicioSubtitulo = styled(TxtServicio)`
     border-top: solid 2px var(--ColorBlancoPrincipal);
     border-bottom: solid 2px var(--ColorBlancoPrincipal);
-    padding: 10px 0;
+    padding: 20px 0;
+    margin: 20px 0;
     font-size: 36px;
 
     @media (max-width: 1000px) {
@@ -98,8 +99,7 @@ const ContenedorImg = styled(ContenedorIzquierdo)`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--ColorBlancoPrincipal);
-    padding: 5px;
+   
     height: 200px;
     img {
         width: 100%;
@@ -118,6 +118,9 @@ const ContenedorSeccionServicio = styled.div`
     align-items: center;
     background-color: var(--ColorVerdePrincipal);
 `;
+const ContenedorGenericoServicios = styled(ContenedorGenerico)`
+    max-width: 1200px;
+`
 
 const Servicio = ({titulo, txt, src, reverse}) => {
     return (
@@ -138,7 +141,7 @@ const Servicio = ({titulo, txt, src, reverse}) => {
 export const SeccionServicios = () => {
     return (
         <ContenedorSeccionServicio>
-            <ContenedorGenerico id="servicios">
+            <ContenedorGenericoServicios id="servicios">
                 <ContenedorServicios>
                     <TituloPrincipal>Servicio</TituloPrincipal>
                     <Servicio 
@@ -155,7 +158,7 @@ export const SeccionServicios = () => {
 
                     <TxtServicioSubtitulo center> Servicio de <b> transporte </b> y guía <b> turística </b> en el hermoso puerto de Mazatlán </TxtServicioSubtitulo>
                 </ContenedorServicios>
-            </ContenedorGenerico>
+            </ContenedorGenericoServicios>
         </ContenedorSeccionServicio>
     );
 };
