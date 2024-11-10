@@ -5,6 +5,9 @@ import imgContacto from '../src/img/imgContacto.webp'
 import { ContenedorVerde } from "../componentesGenerales/Displays";
 import { TxtGenerico } from "../componentesGenerales/Txt";
 import { BtnWhatsapp } from "../componentesGenerales/Btn";
+import { useState } from "react";
+import emailjs from "emailjs-com"; 
+
 
 // Estilos para la sección de contacto
 const ContenedorSeccionContactoStyled = styled(ContenedorGenerico)`
@@ -99,44 +102,103 @@ const ContenedorForm = styled.form`
     
 `
 const FormularioContacto = () => {
-    return (
-        <ContenedorForm>
-            <TituloFormulario>Formulario de Contacto</TituloFormulario>
+    const [formData, setFormData] = useState({
+        nombre: "",
+        email: "",
+        telefono: "",
+        mensaje: "",
+    });
 
-            <LabelFormularioStyled htmlFor="nombre"> Nombre </LabelFormularioStyled>
-            <InputFormulario 
-                type="text" 
-                id="nombre"
-                placeholder="Nombre Completo" 
-                required 
-            />
+    // Función para manejar el envío del formulario
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Enviar los datos del formulario utilizando EmailJS
+        emailjs
+            .sendForm(
+                "service_v7dqnfn", // Aquí va tu Service ID
+                "template_hq4mzln", // Aquí va tu Template ID
+                e.target, // El formulario que estamos enviando
+                "I3FWcjsDSBM6m8K0v" // Aquí va tu User ID
+            )
+            .then(
+                (result) => {
+                    console.log(result.text); // Esto se imprime si el correo se envía correctamente
+                    alert("¡Correo enviado, te estaremos contactando :D!");
+                    setFormData({
+                        nombre: "",
+                        email: "",
+                        telefono: "",
+                        mensaje: "",
+                    });
+                },
+                (error) => {
+                    console.log(error.text); // Esto se imprime si hay un error al enviar el correo
+                    alert("Hubo un error al enviar el correo. Intenta nuevamente.");
+                }
+            );
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    return (
+        <ContenedorForm onSubmit={handleSubmit}>
+            <TituloFormulario>Formulario de Contacto</TituloFormulario>
+            
+                <LabelFormularioStyled htmlFor="nombre"> Nombre </LabelFormularioStyled>
+                <InputFormulario
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    placeholder="Nombre Completo"
+                    required
+                />
            
+      
+
             <ContenedorHorizontalContacto>
                 <ContenedorVertical>
                     <LabelFormularioStyled htmlFor="email"> Correo </LabelFormularioStyled>
-                    <InputFormulario 
-                        type="email" 
+                    <InputFormulario
+                        type="email"
                         id="email"
-                        placeholder="Correo Electrónico" 
-                        required 
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Correo Electrónico"
+                        required
                     />
                 </ContenedorVertical>
                 <ContenedorVertical>
                     <LabelFormularioStyled htmlFor="telefono"> Teléfono </LabelFormularioStyled>
-                    <InputFormulario 
-                        type="tel" 
+                    <InputFormulario
+                        type="tel"
                         id="telefono"
-                        placeholder="Número de Teléfono" 
-                        required 
+                        name="telefono"
+                        value={formData.telefono}
+                        onChange={handleChange}
+                        placeholder="Número de Teléfono"
+                        required
                     />
                 </ContenedorVertical>
             </ContenedorHorizontalContacto>
-       
+
             <LabelFormularioStyled htmlFor="txt"> Mensaje </LabelFormularioStyled>
-            <TextAreaFormulario 
+            <TextAreaFormulario
                 id="txt"
-                placeholder="Escribe tu mensaje..." 
-                required 
+                name="mensaje"
+                value={formData.mensaje}
+                onChange={handleChange}
+                placeholder="Escribe tu mensaje..."
+                required
             />
             <BotonEnviar type="submit">Enviar</BotonEnviar>
         </ContenedorForm>
