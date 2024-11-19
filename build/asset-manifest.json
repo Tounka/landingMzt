@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.acb693b0.css",
-    "main.js": "/static/js/main.ab81320f.js",
+    "main.js": "/static/js/main.08a0e87c.js",
     "static/media/imgExperiencias3Ram.webp": "/static/media/imgExperiencias3Ram.342d380c380fc14fc760.webp",
     "static/media/imgExperiencias1Ram.webp": "/static/media/imgExperiencias1Ram.516c9775300bb452ab7e.webp",
     "static/media/imgRandomPrincipal.jpg": "/static/media/imgRandomPrincipal.da403d3eafc6012897dd.jpg",
@@ -11,12 +11,13 @@
     "static/media/imgContacto.webp": "/static/media/imgContacto.5c7b770738e85e8e6d81.webp",
     "static/media/NunitoSans_Light.ttf": "/static/media/NunitoSans_Light.71ad4ce4724d6d448a27.ttf",
     "static/media/imgExperiencias2Ram.jpg": "/static/media/imgExperiencias2Ram.5f9ca4798d0b8737139e.jpg",
+    "static/media/imgMazatlan2.jpg": "/static/media/imgMazatlan2.f1efb88e9937e1a25202.jpg",
     "index.html": "/index.html",
     "main.acb693b0.css.map": "/static/css/main.acb693b0.css.map",
-    "main.ab81320f.js.map": "/static/js/main.ab81320f.js.map"
+    "main.08a0e87c.js.map": "/static/js/main.08a0e87c.js.map"
   },
   "entrypoints": [
     "static/css/main.acb693b0.css",
-    "static/js/main.ab81320f.js"
+    "static/js/main.08a0e87c.js"
   ]
 }

@@ -3,7 +3,7 @@ import { ContenedorGenerico } from "../componentesGenerales/Displays";
 import { ImgPicture } from "../componentesGenerales/ImgPicture";
 import { TxtGenerico } from "../componentesGenerales/Txt";
 import imgBan from '../src/img/imgBan.jpg'
-
+import imgMazatlan from '../src/img/imgMazatlan2.jpg'
 const ContenedorServicios = styled.div`
     display: flex;
     flex-direction: column;
@@ -151,7 +151,7 @@ export const SeccionServicios = () => {
                     />
                     <Servicio 
                         reverse 
-                        src={imgBan} 
+                        src={imgMazatlan} 
                         titulo='Guía Turístico' 
                         txt='Nuestro servicio de guía turística te permitirá conocer a fondo la rica historia y cultura de Mazatlán. Guiados por expertos locales, recorrerás los lugares más emblemáticos de la ciudad, desde sus playas hasta sus tradiciones. Nuestros guías te brindarán una experiencia personalizada, compartiendo contigo los secretos y tesoros ocultos de este hermoso puerto. ¡Haz que tu visita sea inolvidable con una guía especializada!' 
                     />

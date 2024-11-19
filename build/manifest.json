@@ -1,25 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Guía Turística Mazatlán",
+  "name": "Guía Turística Mazatlán - Explora y Vive",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "logoV1Mini.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "logoV1.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logoV1.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#FF5733",
+  "background_color": "#FFFFFF",
+  "description": "Explora Mazatlán a través de nuestros recorridos turísticos guiados y descubre su historia, playas y gastronomía."
 }

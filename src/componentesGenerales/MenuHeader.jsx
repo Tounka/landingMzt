@@ -131,7 +131,7 @@ export const MenuHeader = () => {
                 <ContenedorSeccion gap='20px'>
                     <TxtGenerico onClick={() => scrollToSection('inicio')} color= 'var(--ColorVerdePrincipal)'  bold pointer fontFamily='var(--FuentePrincipal)' > Inicio </TxtGenerico>
                     <ContenedorInvisible>
-                        <TxtGenerico onClick={() => scrollToSection('Experiencias')} color= 'var(--ColorVerdePrincipal)'   fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
+                        <TxtGenerico onClick={() => scrollToSection('Experiencias')} color= 'var(--ColorVerdePrincipal)' pointer   fontFamily='var(--FuentePrincipal)' > Experiencias </TxtGenerico>
                     </ContenedorInvisible>
                     <BtnSecundario onClick={() => scrollToSection('contacto')}>Contacto</BtnSecundario>
                 </ContenedorSeccion>
